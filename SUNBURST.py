@@ -79,7 +79,7 @@ quit				 ==> Met FIN a la session
                         #Ouverture fichier a prendre (read car envoi)
 			with open(commande[9:], "rb") as fichier:
 				envoi(base64.b64encode(fichier.read()).decode("ascii","ignore"))
-                elif commande[:6] == "upload":
+		elif commande[:6] == "upload":
 			with open(commande[7:], "wb") as fichier:
 				data = reception()
 				fichier.write(base64.b64decode(data))
